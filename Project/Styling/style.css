@@ -9,6 +9,16 @@
     --white: #ffffff;
 }
 
+[data-theme="dark"] {
+    --text-color-gray700: #565973;
+    --gray800-color: #3E4265;
+    --main-button-background-color: #6366f1;
+    --white: #fff;
+    --bc-dark-lighter:#1b1f29;
+    --bc-dark-darker: ##0b0f19;
+}
+
+
 header{
     display: flex;
     justify-content: space-between;
@@ -125,4 +135,8 @@ input:checked + .slider::before{
     .dark-mode-h4{
         display: flex;
     }
+}
+
+@media (prefers-color-scheme: dark){
+    
 }
