@@ -24,6 +24,11 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
+    background-color: #fefeff;
+}
+
+.logo-dark{
+    display: none;
 }
 
 .header-controls{
@@ -138,5 +143,16 @@ input:checked + .slider::before{
 }
 
 @media (prefers-color-scheme: dark){
+
+    header{
+        background-color: var(--bc-dark-lighter);
+    }
     
+    .logo-light{
+    display: none;
+}
+
+    .logo-dark{
+    display: block;
+}
 }
