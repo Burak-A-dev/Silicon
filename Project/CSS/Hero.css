@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+    --text-color-gray700: #565973;    
+    --dark-mode-toggle-background: #9397ad;
+    --dark-mode-toggle-on: #51db56;
+    --gray800-color: #3E4265;
+    --main-button-background-color: #6366f1;
+    --white: #ffffff;
+}
+
+#Hero{
+    /* background: #FEFEFF; */
+background-color: linear-gradient(to bottom, rgba(254, 254, 255, 1) 0%, rgba(252, 245, 254, 1) 100%);
+
+display: flex;justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+h1{
+    color: #131022;
+    font-size: 72px;
+}
+
+p{
+    font-size: 20px;
+    color: var(--text-color-gray700);
+}
+
+img{
+    width: 90%;
+}
+
+
+.apple-dark{
+    display: none;
+    width: 366px;
+    height: 50px;
+}
+
+.google-dark{
+    display: none;
+    width: 366px;
+    height: 50px;
+}
