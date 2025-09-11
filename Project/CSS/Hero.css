@@ -9,6 +9,8 @@
 
 html {
   border: 0;
+   margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -27,31 +29,48 @@ html {
   place-items: center;
   grid-auto-flow: row;
   row-gap: 1rem;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  /* margin-left: 1rem;
+  margin-right: 1rem; */
 }
 
-h1 {
+.hero-column-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-header {
   color: #131022;
   font-size: 42px;
   text-align: center;
-  margin-top: 2em;
+  margin: 0;
+  display: none;
 }
 
-p {
+.hero-p {
   font-size: 20px;
   color: var(--text-color-gray700);
   text-align: center;
   width: 80%;
+  margin: 0;
 }
 
-.apple-light {
-  width: 366px;
+img {
+  width: 100%;
+  height: auto;
+}
+
+.apple-light{
+width: 366px;
   height: 50px;
 }
 
 .google-light {
   width: 366px;
   height: 50px;
-  margin-bottom: 6rem;
 }
 
 .apple-dark {
@@ -59,7 +78,6 @@ p {
   width: 366px;
   height: 50px;
 }
-
 .google-dark {
   display: none;
   width: 366px;
@@ -67,6 +85,8 @@ p {
 }
 
 .phone-tablet {
+  width: 100%;
+  height: auto;
   display: none;
 }
 
@@ -74,57 +94,40 @@ p {
   display: none;
 }
 
+
 @media (min-width: 768px) {
-  #Hero {
-    margin-top: 5rem;
-    display: grid;
-    place-items: start;
-    row-gap: 1rem;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 1fr;
-  }
+#Hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 2fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 
-  h1 {
-    color: #131022;
-    font-size: 42px;
-    margin-top: 2em;
-    text-align: left;
-    width: 22rem;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
+.hero-header {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  display: none;
+}
 
-  p {
-    font-size: 20px;
-    color: var(--text-color-gray700);
-    text-align: left;
-    width: 20rem;
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
+.hero-p {
+ display: none;
+}
 
-  .app-buttons {
-    display: flex;
-    gap: 1rem;
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-  }
+.apple-light{
+width: 366px;
+  height: 50px;
 
-  .apple-light {
-    width: 156px;
-    height: 50px;
-  }
+  display: none;
+}
 
-  .google-light {
-    width: 156px;
-    height: 50px;
-  }
+.google-light {
+  width: 366px;
+  height: 50px;
 
-  .phone-tablet {
-    justify-self: end;
-    display: flex;
-    grid-column: 2 / 3;
-    /* This rule is the key to fixing the vertical alignment, extending the phone image to span all three rows of content on the left side */
-    grid-row: 1 / 4;
-  }
+  display: none;
+}
+
 }
