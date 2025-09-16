@@ -1,10 +1,10 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 :root {
@@ -18,10 +18,25 @@
 }
 
 #features{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.features-h1{
+    font-size: 28px;
+    text-align: center;
+}
+
+.features-main-p{
+    font-size: 20px;
+    width: 90%;
+    margin-left: 1rem;
+    color: var(--features-p-light);
+
 }
 
 .features-content {
@@ -34,14 +49,24 @@ justify-content: center;
 .features-span {
     grid-column: 1 / 2;
 
-    width: 1rem;
-    width: auto;
+    width: 5rem;
+    height: 5rem;
+    margin: 0 0 2rem 0.5rem;
     background-color: var(--features-span-bc-light);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    justify-self: start;
+    align-self: start;
 }
 
+
 .features-span > img {
-    width: 10px;
-    height: auto;
+    width: 2rem;
+    height: 2rem;
 }
 
 .column-right {
@@ -52,13 +77,17 @@ justify-content: center;
 }
 
 .features-h3{
-font-size: 24px;
-color: var(--features-h3-light);
+    width: 100%;
+    margin: 0 1rem 0 0;
+    font-size: 24px;
+    text-align: left;
+    color: var(--features-h3-light);
 }
 
 .features-p{
-font-size: 18px;
-color: var(--features-p-light);
+    font-size: 18px;
+    text-align: left;
+    color: var(--features-p-light);
 }
 
 @media (min-width: 768px) {
