@@ -91,7 +91,17 @@
 }
 
 @media (min-width: 768px) {
-    
+    #features{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .features-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr repeat(3, 1fr);
+    }
 }
 
 
