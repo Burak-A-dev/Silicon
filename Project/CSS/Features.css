@@ -12,7 +12,11 @@
     --features-p-light: #585c7b;
     --features-span-bc-light: #f3f6ff;
     --white: #ffffff;
+}
 
+[data-theme="dark"]{
+    --features-bc: #0b0f19;
+    --features-main-p: #85878c;
     --features-p-dark: #b6b7ba;
     --features-span-bc-dark: #171b25;
 }
@@ -30,6 +34,7 @@
     width: 100%;
     height: auto;
     object-fit: contain;
+    display: none;
 }
 
 .features-h1{
@@ -247,5 +252,28 @@
         color: #555;
         font-size: 1.7rem;
         line-height: 2rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+  
+}
+}
+
+
+@media (prefers-color-scheme: dark){
+    #features{
+        background-color: var(--features-bc);
+    }
+    .features-h1{
+        color: var(--white);
+    }
+    .features-main-p{
+        color: var(--features-main-p);
+    }
+    .features-p{
+        color: var(--features-p-dark);
+    }
+    .features-span{
+        background-color: var(--features-span-bc-dark);
     }
 }
