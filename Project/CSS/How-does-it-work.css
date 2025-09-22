@@ -103,8 +103,44 @@ width: 80%;
 }
 }
 
-@media (min-width: 1920px){
-    
+@media (min-width: 768px){
+.hdiw-img-mobile{
+    display: none;
+}
+#hdiw{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+    }
+.hdiw-h1{
+    color: var(--hdiw-text-color-light);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    }
+.hdiw-img-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 2.5rem;
+    width: 80%;
+    }
+.hdiw-img{
+    display: block;
+    height: 40%;
+    width: auto;
+    }
+.hdiw-h2{
+    font-size: 2rem;
+}
+.hdiw-p{
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
 }
 
 
