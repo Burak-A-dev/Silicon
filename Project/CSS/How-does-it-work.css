@@ -20,6 +20,9 @@ html {
 
 
 [data-theme="dark"] {
+    --hdiw-dark-bc: #151922;
+    --hdiw-text-color-dark: #fff;
+    --hdiw-p-dark: #b9babd;
 }
 
 #hdiw{
@@ -125,7 +128,7 @@ width: 80%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 0.6rem;
+    gap: 6rem;
     margin-bottom: 2.5rem;
     width: 80%;
     }
@@ -146,5 +149,16 @@ width: 80%;
 
 
 @media (prefers-color-scheme: dark) {
- 
+ #hdiw{
+    background-color: var(--hdiw-dark-bc);
+ }
+ .hdiw-h1{
+    color: var(--hdiw-text-color-dark);
+ }
+ .hdiw-h2{
+    color: var(--hdiw-text-color-dark);
+ }
+ .hdiw-p{
+    color: var(--hdiw-p-dark);
+ }
 }
