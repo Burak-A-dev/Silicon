@@ -177,12 +177,11 @@ html {
   background: #5a3de0;
 } */
 
-/* ---- responsive ---- */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .appfeat-columns {
     flex-direction: column;
   }
-}
+} */
 
 @media (max-width: 1920px) {
     #appfeat{
