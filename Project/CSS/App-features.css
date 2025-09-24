@@ -95,48 +95,93 @@ html {
 }
 
 .appfeat-right {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
-    margin-top: 2.6rem;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.appfeat-right {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .appfeat-right h2 {
-    font-size: 2.7rem;
-    font-weight: 800;
-    line-height: 1.2;
-    color: #1A1A1A;
-    margin-bottom: 1.5rem;
+  font-size: 2.7rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
 }
 
-.appfeat-right p {
-    color: #4A4A4A;
-    font-size: 1.6rem;
+.appfeat-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem; /* space between the two columns */
 }
 
-.appfeat-span-container{
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: column;
+.appfeat-span-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .appfeat-span {
-    width: 5rem;
-    height: 5rem;
-    background-color: var(--features-span-bc-light);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-self: start;
-    align-self: start;
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(135deg, #f3f4fe 0%, #f9faff 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.appfeat-span > img {
-    width: 2rem;
-    height: 2rem;
+.appfeat-span img {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.appfeat-span-container p {
+  color: #4a4a4a;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+/* .appfeat-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  background: #6b4eff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.appfeat-button img {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.appfeat-button:hover {
+  background: #5a3de0;
+} */
+
+/* ---- responsive ---- */
+@media (max-width: 600px) {
+  .appfeat-columns {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 1920px) {
