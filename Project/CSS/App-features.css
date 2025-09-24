@@ -15,7 +15,12 @@ html {
 :root{
     --appfeat-button-bc: #6366f1;
     --bc-light: #ffffff;
-    --p-light: #565973
+    --p-h3-light: #565973
+}
+
+[data-theme="dark"] {
+    --bc-dark: #0b0f19;
+    --p-h2-dark: #b6b7ba;
 }
 
 .appfeat-container {
@@ -29,6 +34,7 @@ html {
 
 #appfeat {
     padding: 4rem 2rem;
+    background-color: var(--bc-light);
 }
 
 .appfeat-left {
@@ -36,15 +42,16 @@ html {
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 
 .appfeat-h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #1A1A1A;
-    margin-bottom: 2rem;
+    font-size: 2.7rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  width: 40rem;
 }
 
 .appfeat-h3 {
@@ -75,17 +82,12 @@ html {
     color: #fff;
     cursor: pointer;
     font-size: 20px;
-    margin-top: 2.6rem;
+    margin-top: 4rem;
 }
 
 .appfeat-button > img{
     width: 1rem;
     height: 1rem;
-}
-
-.appfeat-button:hover {
-    background-color: #E5E5E5;
-    border-color: #D5D5D5;
 }
 
 .appfeat-img-right {
@@ -95,13 +97,6 @@ html {
 .appfeat-img-left {
     align-self: start;
 }
-
-/* .appfeat-right {
-  width: 20rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-} */
 
 .appfeat-right {
   max-width: 600px00px;
@@ -113,7 +108,7 @@ html {
 
 .appfeat-right h2 {
   font-size: 2.7rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.2;
   color: #1a1a1a;
   margin-bottom: 1rem;
@@ -159,5 +154,23 @@ html {
 @media (max-width: 1919px) {
     #appfeat{
         display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    #appfeat{
+        background-color: var(--bc-dark);
+    }
+    .appfeat-h2{
+        color: var(--bc-light);
+    }
+    .appfeat-h3{
+        color: var(--p-h2-dark);
+    }
+    .appfeat-span > h2{
+        color: var(--bc-light);
+    }
+    .appfeat-span > p {
+        color: var(--appfeat-button-bc);
     }
 }
