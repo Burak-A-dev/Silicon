@@ -20,6 +20,10 @@ html {
 }   
 
 [data-theme="dark"] {
+    --testimonials-bc-dark: #151922;
+    --testimonials-card-dark: #1e222b;
+    --testimonials-p-dark: #bbbdbf;
+    --user-h4-dark: #8e9195;
 }
 
 #testimonials {
@@ -59,8 +63,8 @@ html {
 
 .quote {
   background-color: var(--tesimonials-quote-bc);
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,8 +75,8 @@ html {
 }
 
 .quote img {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
 }
 
 .stars {
@@ -89,7 +93,7 @@ html {
 .user-container {
   display: flex;
   align-items: center;
-  margin-top: auto; /* Push user info to bottom */
+  margin-top: auto;
   gap: 0.8rem;
 }
 
@@ -118,4 +122,16 @@ html {
 }
 
 @media (prefers-color-scheme: dark){
+    #testimonials {
+        background-color: var(--testimonials-bc-dark);
+    }
+    .testimonials-div-container{
+        background-color: var(--testimonials-card-dark);
+    }
+    .testimonials-div-container p {
+        color: var(--testimonials-p-dark);
+    }
+    .user h4 {
+        color: var(--user-h4-dark);
+    }
 }
