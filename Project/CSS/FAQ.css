@@ -13,19 +13,120 @@ html {
 }
 
 :root{
- 
+--bc-light: #fff;
+--faq-h4-light: #585c7b;
 }
 
 [data-theme="dark"] {
     
 }
 
+#faq {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+width: 100vw;
+gap: 1rem;
+}
+
+.faq-h2 {
+  font-size: 1.5rem;
+  margin: 0 1rem 0 1rem;
+  color: var(--faq-h4-light);
+}
+
+.faq-h4 {
+  margin: 0 0.6rem 0 0.6rem;
+}
+
+.contact-container {
+  display: none;
+}
+
+.contact-box {
+  display: none;
+}
+
+
+/* .contact-box button {
+  
+}
+
+.contact-box button img {
+  
+} */
+
+.faq-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 0 0.6rem 0 0.6rem;
+  border: 1px solid black;
+}
+
+.faq {
+margin: 0 0.6rem 0 0.6rem;
+  border: 1px solid black;
+}
+
+.accordion {
+  
+}
+
+.accordion-header {
+  margin-left: 1rem;
+}
+
+.accordion-span{
+
+}
+
+.accordion-content {
+  
+}
+
+.faq-btn-mobile {
+  
+}
+
+
 @media (min-width: 768px) {
-    
+
+
+
+.contact-box {
+  display: none;
+}
+
+
+.contact-box button {
+  
+}
+
+.contact-box button img {
+  
+}
 }
 
 @media (min-width: 768px) {
-    
+
+
+
+  .contact-box {
+  display: none;
+}
+
+
+.contact-box button {
+  
+}
+
+.contact-box button img {
+  
+}  
 }
 
 @media (prefers-color-scheme: dark){
