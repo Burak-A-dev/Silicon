@@ -63,7 +63,7 @@ gap: 1rem;
   justify-content: center;
   flex-direction: column;
   border-radius: 10px;
-  margin: 0 0.6rem 0 0.6rem;
+  margin: 0 0 0 0;
   border: 1px solid black;
 }
 
@@ -76,16 +76,35 @@ margin: 0 0.6rem 0 0.6rem;
   
 }
 
-.accordion-header {
-  margin-left: 1rem;
+.accordion > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem 4rem 0.5rem 2rem;
+  font-size: 1rem;
+  background-color: white;
+  width: 90%;
+  height: auto;
+  text-align: left;
+  padding: 0.3rem;
+  font-weight: bold;
 }
 
 .accordion-span{
-
+  display: inline-block;
+width: 20px;
+height: auto;
+background-repeat: 50%;
+background-color: red;
+text-align: left;
+margin-right: 5rem;
 }
 
 .accordion-content {
-  
+  margin: 0.5rem 1rem 0.8rem 1rem;
+  font-size: 1rem;
+  background-color: #fff;
+  padding: 0.3rem;
 }
 
 .faq-btn-mobile {
@@ -109,9 +128,14 @@ margin: 0 0.6rem 0 0.6rem;
 .contact-box button img {
   
 }
+
+
+.faq-btn-mobile {
+ display: none; 
+}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1920px) {
 
 
 
@@ -126,7 +150,13 @@ margin: 0 0.6rem 0 0.6rem;
 
 .contact-box button img {
   
-}  
+}
+
+
+.faq-btn-mobile {
+ display: none; 
+}
+
 }
 
 @media (prefers-color-scheme: dark){
