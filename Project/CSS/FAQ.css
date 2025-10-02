@@ -14,10 +14,12 @@ html {
 
 :root {
   --bc-light: #fff;
+  --faq-h2-light: black;
   --faq-h4-light: #585c7b;
-}
-
-[data-theme="dark"] {
+  --button-bc: #6366f1;
+  --accordion-content: #585c7b;
+  --faq-container-border-light: #e2e5f1;
+  --accordion-closed-light: #f3f6ff;
 }
 
 #faq {
@@ -31,15 +33,19 @@ html {
 }
 
 .faq-h2 {
-  font-size: 1.5rem;
-  margin: 0 0 0 0;
-  color: var(--faq-h4-light);
-  width: 50%;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--faq-h2-light);
+  margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 .faq-h4 {
-  margin: 0 0.6rem 0 0.6rem;
   font-size: 1.2rem;
+  width: min(720px, 95%);
+  margin-bottom: 0.75rem;
+  color: var(--faq-h4-light);
+  text-align: center;
 }
 
 .contact-container {
@@ -51,44 +57,52 @@ html {
 }
 
 .faq-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 10px;
-  margin: 0 1.5rem 0 1.5rem;
-  border: 1px solid #e5e5e5;
-  background: #fff;
+  margin: auto auto 2rem auto;
+  width: 40rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--faq-container-border-light);
+  background-color: var(--bc-light);
+  box-shadow: 0 8px 24px rgba(16,24,40,0.04);
 }
 
 .faq {
-  margin: 0;
-  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  border-bottom: 2px solid var(--faq-container-border-light);
+  background: transparent;
+}
+
+.accordion {
   width: 100%;
 }
 
-.accordion > button {
-  display: flex;
+button.accordion-button {
+  display: grid;
+  grid-template-columns: 1fr 56px;
+  gap: 12px;
   align-items: center;
-  justify-content: space-between;
-  font-size: 1.2rem;
-  background-color: #fff;
-  width: 100%;
-  padding: 1rem;
-  font-weight: 600;
+  background: transparent;
   border: none;
+  width: 100%;
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  border-radius: 10px;
+}
+
+button.accordion-button .question-text {
+  line-height: 1.25;
+  color: #0f172a;
 }
 
 .accordion-span {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #f1f3f9;
+  background: var(--accordion-closed-light);
   position: relative;
-  margin-right: 7rem;
+  flex-shrink: 0;
 }
 
 .accordion-span::before {
@@ -98,31 +112,51 @@ html {
   left: 50%;
   width: 8px;
   height: 8px;
-  border-right: 2px solid #4a4a68;
-  border-bottom: 2px solid #4a4a68;
+  border-right: 2px solid #6b6b85;
+  border-bottom: 2px solid #6b6b85;
   transform: translate(-50%, -50%) rotate(45deg);
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease, border-color 0.2s ease;
 }
 
-.accordion > button.active .accordion-span::before {
+button.accordion-button.active .accordion-span {
+  background: var(--button-bc);
+}
+
+button.accordion-button.active .accordion-span::before {
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
   transform: translate(-50%, -50%) rotate(-135deg);
 }
 
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
-  padding: 0 1rem;
-  font-size: 0.9rem;
-  color: #444;
+  transition: max-height 0.35s ease, padding 0.3s ease;
+  padding: 0 20px;
+  font-size: 0.95rem;
+  color: var(--accordion-content);
+  line-height: 1.6;
+  background: transparent;
 }
 
-.accordion > button.active + .accordion-content {
-  max-height: 500px;
-  padding: 1rem;
+button.accordion-button.active + .accordion-content {
+  padding: 16px 20px 24px 20px;
+  max-height: 800px;
 }
 
 .faq-btn-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--button-bc);
+  color: var(--bc-light);
+  width: 13rem;
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 2.5rem;
 }
 
 @media (min-width: 768px) {
