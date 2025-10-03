@@ -17,9 +17,11 @@ html {
   --faq-h2-light: black;
   --faq-h4-light: #585c7b;
   --button-bc: #6366f1;
+  --contact-us-btn-color: #22c55e;
   --accordion-content: #585c7b;
   --faq-container-border-light: #e2e5f1;
   --accordion-closed-light: #f3f6ff;
+  --faq-button-arrow: #6b6b85;
 }
 
 #faq {
@@ -112,8 +114,8 @@ button.accordion-button .question-text {
   left: 50%;
   width: 8px;
   height: 8px;
-  border-right: 2px solid #6b6b85;
-  border-bottom: 2px solid #6b6b85;
+  border-right: 2px solid var(--faq-button-arrow);
+  border-bottom: 2px solid var(--faq-button-arrow);
   transform: translate(-50%, -50%) rotate(45deg);
   transition: transform 0.25s ease, border-color 0.2s ease;
 }
@@ -123,8 +125,8 @@ button.accordion-button.active .accordion-span {
 }
 
 button.accordion-button.active .accordion-span::before {
-  border-right: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid var(--bc-light);
+  border-bottom: 2px solid var(--bc-light);
   transform: translate(-50%, -50%) rotate(-135deg);
 }
 
@@ -160,8 +162,92 @@ button.accordion-button.active + .accordion-content {
 }
 
 @media (min-width: 768px) {
-  .contact-box {
-    display: none;
+  
+  .contact-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+
+    width: 80vw;
+    margin: 0 5rem 5rem 5rem;
+  }
+  
+  .contact-box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    width: 18rem;
+    height: 10rem;
+    border: 2px solid var(--faq-container-border-light);
+  }
+
+  .contact-box1 > img {
+    width: 1.5rem;
+    height: auto;
+    margin-left: 1rem;
+  }
+
+  .contact-box1 > h4 {
+    width: 9rem;
+    height: 1rem;
+    margin-left: 1rem;
+  }
+
+  .contact-box1 > button {
+    width: 9rem;
+    height: 1rem;
+    background-color: var(--bc-light);
+    color: var(--button-bc);
+    text-align: left;
+    font-weight: 800;
+    margin-left: 1rem;
+  }
+
+  .contact-box1 > button > img {
+    margin-left: 1rem;
+    width: 0.8rem;
+    height: auto;
+  }
+
+  .contact-box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    width: 18rem;
+    height: 10rem;
+    border: 2px solid var(--faq-container-border-light);
+  }
+
+  .contact-box2 > img {
+    width: 1.5rem;
+    height: auto;
+    margin-left: 1rem;
+  }
+
+  .contact-box2 > h4 {
+    width: 10rem;
+    height: 1rem;
+    margin-left: 1rem;
+  }
+
+  .contact-box2 > button {
+    width: 9rem;
+    height: 1rem;
+    background-color: var(--bc-light);
+    color: var(--contact-us-btn-color);
+    text-align: left;
+    font-weight: 800;
+    margin-left: 1rem;
+  }
+
+  .contact-box2 > button > img {
+    margin-left: 1rem;
+    width: 0.8rem;
+    height: auto;
   }
 
   .faq-btn-mobile {
