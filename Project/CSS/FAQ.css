@@ -22,6 +22,15 @@ html {
   --faq-container-border-light: #e2e5f1;
   --accordion-closed-light: #f3f6ff;
   --faq-button-arrow: #6b6b85;
+  --contact-box-border: #30333b;
+}
+
+[data-theme="dark"]{
+  --bc-dark: #0b0f19;
+  --faq-container-border-dark: #151922;
+  --accordion-closed-dark: #b9babd;
+  --faq-h4-dark: #b6b7ba;
+  --faq-button-span-bc: #1e222b;
 }
 
 .faq-container,
@@ -293,7 +302,6 @@ button.accordion-button.active + .accordion-content {
     grid-template-columns: 25rem 38rem;
     grid-template-rows: 1fr 1fr 3fr 4fr; 
     align-items: flex-start;
-    /* gap: 7rem; */
     padding-top: 6rem;
     padding-bottom: 6rem;
     max-width: 1300px;
@@ -377,4 +385,35 @@ button.accordion-button.active + .accordion-content {
 
 
 @media (prefers-color-scheme: dark) {
+  .faq-h2{
+    color: var(--bc-light);
+  }
+  .faq-h4{
+    color: var(--faq-h4-dark);
+  }
+  .contact-box1{
+    border: 1px solid var(--contact-box-border);
+  }
+  .contact-box2{
+    border: 1px solid var(--contact-box-border);
+  }
+  .contact-box1 h4 {
+    color: var(--faq-h4-dark);
+  }
+  .contact-box2 h4 {
+    color: var(--faq-h4-dark);
+  }
+  button.accordion-button .question-text{
+    color: var(--bc-light);
+  }
+  .faq{
+    background-color: var(--faq-container-border-dark);
+    border: none;
+  }
+  .accordion-span{
+    background-color: var(--faq-button-span-bc);
+  }
+  .button.accordion-button{
+    font-weight: normal;
+  }
 }
