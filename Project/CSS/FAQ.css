@@ -24,6 +24,49 @@ html {
   --faq-button-arrow: #6b6b85;
 }
 
+/* ----------------- */
+/* FAQ & Contact Containers */
+/* ----------------- */
+.faq-container,
+.contact-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 2rem auto;
+}
+
+.faq-container {
+  margin: auto auto 2rem auto;
+  width: 40rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--faq-container-border-light);
+  background-color: var(--bc-light);
+  box-shadow: 0 8px 24px rgba(16,24,40,0.04);
+}
+
+.faq {
+  width: 100%;
+  border-bottom: 2px solid var(--faq-container-border-light);
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .faq {
+    border-radius: 10px;
+    border: 2px solid var(--faq-container-border-light);
+    overflow: hidden;
+  }
+}
+
 #faq {
   display: flex;
   align-items: center;
@@ -56,22 +99,6 @@ html {
 
 .contact-box {
   display: none;
-}
-
-.faq-container {
-  margin: auto auto 2rem auto;
-  width: 40rem;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 2px solid var(--faq-container-border-light);
-  background-color: var(--bc-light);
-  box-shadow: 0 8px 24px rgba(16,24,40,0.04);
-}
-
-.faq {
-  width: 100%;
-  border-bottom: 2px solid var(--faq-container-border-light);
-  background: transparent;
 }
 
 .accordion {
@@ -163,101 +190,103 @@ button.accordion-button.active + .accordion-content {
 
 @media (min-width: 768px) {
 
-  .faq-container{
-    width: 90%;
-  }
-  
-  .contact-container{
+  .faq-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 2rem auto;
+}
+
+
+  .contact-container {
     display: grid;
-    grid-template-columns: 1fr 4fr 4fr 1fr;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
-    
-
-    width: 90vw;
-    margin: 0 5rem 5rem 5rem;
-  }
-  
-  .contact-box1 {
-    grid-column: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-evenly;
-    width: 24rem;
-    height: 14rem;
-    border: 2px solid var(--faq-container-border-light);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 90%;
+    max-width: 1100px;
+    margin: 3rem auto 5rem auto;
   }
 
-  .contact-box1 > img {
-    width: 1.5rem;
-    height: auto;
-    margin-left: 1rem;
-  }
-
-  .contact-box1 > h4 {
-    width: 9rem;
-    height: 1rem;
-    margin-left: 1rem;
-  }
-
-  .contact-box1 > button {
-    width: 9rem;
-    height: 1rem;
-    background-color: var(--bc-light);
-    color: var(--button-bc);
-    text-align: left;
-    font-weight: 800;
-    margin-left: 1rem;
-  }
-
-  .contact-box1 > button > img {
-    margin-left: 1rem;
-    width: 0.8rem;
-    height: auto;
-  }
-
+  /* Base styles for both boxes */
+  .contact-box1,
   .contact-box2 {
-    grid-column: 3;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: space-evenly;
-    width: 24rem;
-    height: 14rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    border-radius: 12px;
     border: 2px solid var(--faq-container-border-light);
+    background: var(--bc-light);
+    width: 100%;
+    min-height: 12rem;
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.05);
   }
 
-  .contact-box2 > img {
-    width: 1.5rem;
+  .contact-box1 img {
+    width: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-box1 h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--faq-h2-light);
+  }
+
+  .contact-box1 button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: none;
+    color: var(--button-bc);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .contact-box1 button img {
+    width: 1rem;
     height: auto;
-    margin-left: 1rem;
+    color: var(--button-bc);
+    margin: auto;
   }
 
-  .contact-box2 > h4 {
-    width: 10rem;
-    height: 1rem;
-    margin-left: 1rem;
+
+  .contact-box2 img {
+    width: 1.8rem;
+    margin-bottom: 1rem;
   }
 
-  .contact-box2 > button {
-    width: 9rem;
-    height: 1rem;
-    background-color: var(--bc-light);
+  .contact-box2 h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--faq-h2-light);
+  }
+
+  .contact-box2 button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: none;
     color: var(--contact-us-btn-color);
-    text-align: left;
-    font-weight: 800;
-    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
   }
 
-  .contact-box2 > button > img {
-    margin-left: 1rem;
-    width: 0.8rem;
+  .contact-box2 button img {
+    width: 1rem;
     height: auto;
+    margin: auto;
   }
 
-  .faq-btn-mobile {
+  .faq-btn-mobile{
     display: none;
   }
 }
