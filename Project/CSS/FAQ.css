@@ -24,9 +24,6 @@ html {
   --faq-button-arrow: #6b6b85;
 }
 
-/* ----------------- */
-/* FAQ & Contact Containers */
-/* ----------------- */
 .faq-container,
 .contact-container {
   width: 90%;
@@ -206,7 +203,6 @@ button.accordion-button.active + .accordion-content {
     margin: 3rem auto 5rem auto;
   }
 
-  /* Base styles for both boxes */
   .contact-box1,
   .contact-box2 {
     display: flex;
