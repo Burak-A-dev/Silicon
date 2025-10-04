@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+    --subscribe-bc: #f3f6ff;
+}
+
+[data-theme="dark"] {
+}
+
+
+#subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  background-color: var(--subscribe-bc);
+  gap: 1rem;
+
+  width: 400px;
+  height: 200px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.notification-h2-container{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+}
+
+.notification-h2-container img{
+width: 2rem;
+height: 1rem;
+}
+
+.subscribe-h2{
+font-size: 1rem;
+font-weight: 800;
+width: 5rem;
+}
+
+.input-container{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+}
+
+.subscribe-form{
+    
+}
+
+.subscribe-input{
+
+}
+
+.subscribe-button{
+
+}
+
+@media (man-width: 768px) {
+}
+
+@media (man-width: 1920px) {
+}
+
+@media (prefers-color-scheme: dark){
+}
