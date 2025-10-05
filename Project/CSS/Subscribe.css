@@ -61,17 +61,20 @@ font-weight: 800;
 width: 10rem;
 }
 
+.subscribe-h2-desktop{
+display: none;
+}
+
 .input-container {
-    width: 20rem;
-    height: 3rem;
-    margin: 2rem auto auto auto
+ width: 20rem;
+height: 3rem;
+margin: 2rem auto auto auto
 }
 
 .form-wrapper {
     display: flex;
     width: 100%;
     height: 100%;
-    /* border: 1px solid rgba(0, 0, 0, 0.1); */
     border-radius: 8px;
     overflow: hidden;
 }
@@ -115,18 +118,58 @@ width: 10rem;
     border-radius: 0 10px 10px 0; 
 }
 
-/* .subscribe-button:hover {
-    background-color: #5A51E6;
-} */
-
-@media (man-width: 768px) {
-    #subscribe{
+@media (min-width: 768px) {
+      #subscribe{
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        max-width: 95%;
+        margin: 2rem auto;
+        gap: 4rem;
+    }
+    .notification-h2-container{
+        margin-top: 1rem;
+    }
+    .input-container{
+        margin: 1rem;
+    }
+    .subscribe-h2-desktop{
+    display: none;
     }
 }
 
-@media (man-width: 1920px) {
+@media (min-width: 1920px) {
+    #subscribe{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .notification-h2-container{
+        margin-top: 1rem;
+    }
+    .subscribe-h2{
+        display: none;
+    }
+    .subscribe-h2-desktop{
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 800;
+    width: 26rem;
+    }
+    .notification-h2-container{
+        margin-top: 1rem;
+        margin-left: 2rem;
+    }
+    .input-container{
+        margin: 1rem 0 0 0;
+    }
 }
 
 @media (prefers-color-scheme: dark){
