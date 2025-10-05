@@ -13,7 +13,11 @@ html {
 }
 
 :root{
-    --subscribe-bc: #f3f6ff;
+    --faq-bc-light: #f3f6ff;
+    --faq-button-bc: #6366f1;
+    --input-bc: #fff;
+    --faq-input-border-color: #d4d7e5;
+    --faq-input-text-color: #b4b7c9;
 }
 
 [data-theme="dark"] {
@@ -25,17 +29,15 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
-  background-color: var(--subscribe-bc);
   gap: 1rem;
 
-  width: 400px;
-  height: 200px;
+  background-color: var(--faq-bc-light); 
+  height: 18rem;
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 
@@ -44,39 +46,84 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: row;
+margin-top: 2rem;
 }
 
 .notification-h2-container img{
-width: 2rem;
-height: 1rem;
+width: 5rem;
+height: 5rem;
+margin-right: 0.5rem;
 }
 
 .subscribe-h2{
-font-size: 1rem;
+font-size: 1.4rem;
 font-weight: 800;
-width: 5rem;
+width: 10rem;
 }
 
-.input-container{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: row;
+.input-container {
+    width: 20rem;
+    height: 3rem;
+    margin: 2rem auto auto auto
 }
 
-.subscribe-form{
-    
+.form-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.subscribe-input{
-
+.subscribe-form {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 0;
 }
 
-.subscribe-button{
+.subscribe-input {
+    flex-grow: 1;
+    width: auto;
+    height: 100%;
+    padding-left: 0.8rem;
+    box-sizing: border-box;
+    border: 1px solid var(--faq-input-border-color); 
+    background-color: var(--input-bc); 
+    font-size: 1rem;
+    font-weight: 500;
+    color: #b4b7c9;
+    border-radius: 10px 0 0 10px;
+    outline: none; 
 
+    &::placeholder {
+    margin:  auto auto auto 1rem;
+    text-align: start;
+    }
 }
+
+.subscribe-button {
+    width: 8rem;
+    height: 100%;
+    background-color: var(--faq-button-bc);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none; 
+    border-radius: 0 10px 10px 0; 
+}
+
+/* .subscribe-button:hover {
+    background-color: #5A51E6;
+} */
 
 @media (man-width: 768px) {
+    #subscribe{
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }
 
 @media (man-width: 1920px) {
