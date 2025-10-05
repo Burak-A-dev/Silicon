@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+    --footer-bc-light: #fff;
+    --footer-text-color-light: #a9acbd;
+}
+
+[data-theme="dark"] {
+    --footer-bc-dark: #0b0f19;
+    --footer-text-color-dark: #787c8f;
+}
+
+footer{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: var(--footer-text-color-light);
+}
+
+@media (prefers-color-scheme: dark){
+    footer{
+        color: var(--footer-text-color-dark);
+    }
+}
