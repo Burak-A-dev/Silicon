@@ -13,14 +13,15 @@ html {
 }
 
 :root{
-    --faq-bc-light: #f3f6ff;
-    --faq-button-bc: #6366f1;
+    --subscribe-bc-light: #f3f6ff;
+    --subscribe-button-bc: #6366f1;
     --input-bc: #fff;
-    --faq-input-border-color: #d4d7e5;
-    --faq-input-text-color: #b4b7c9;
+    --subscribe-input-border-color: #d4d7e5;
+    --subscribe-input-text-color: #b4b7c9;
 }
 
 [data-theme="dark"] {
+    --subscribe-bc-dark: #151822;
 }
 
 
@@ -31,7 +32,7 @@ html {
   flex-direction: column;
   gap: 1rem;
 
-  background-color: var(--faq-bc-light); 
+  background-color: var(--subscribe-bc-light); 
   height: 18rem;
 
   width: 100%;
@@ -92,7 +93,7 @@ margin: 2rem auto auto auto
     height: 100%;
     padding-left: 0.8rem;
     box-sizing: border-box;
-    border: 1px solid var(--faq-input-border-color); 
+    border: 1px solid var(--subscribe-input-border-color); 
     background-color: var(--input-bc); 
     font-size: 1rem;
     font-weight: 500;
@@ -109,7 +110,7 @@ margin: 2rem auto auto auto
 .subscribe-button {
     width: 8rem;
     height: 100%;
-    background-color: var(--faq-button-bc);
+    background-color: var(--subscribe-button-bc);
     color: white;
     font-size: 1rem;
     font-weight: 600;
