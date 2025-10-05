@@ -15,3 +15,29 @@ darkModeCheckbox.addEventListener('change', () => {
         localStorage.setItem('theme', 'light');
     }
 });
+
+
+/* FAQ - Accordion javaScript code */
+const accordionButtons = document.querySelectorAll(".accordion-button");
+
+accordionButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    accordionButtons.forEach(otherButton => {
+      if (otherButton !== button) {
+        otherButton.classList.remove("active");
+        otherButton.nextElementSibling.style.maxHeight = null;
+      }
+    });
+
+    button.classList.toggle("active");
+    const content = button.nextElementSibling;
+
+    if (button.classList.contains("active")) {
+      content.style.maxHeight = content.scrollHeight;
+    } else {
+      content.style.maxHeight = null;
+    }
+  });
+});
+
+
