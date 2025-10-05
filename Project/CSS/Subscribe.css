@@ -22,6 +22,8 @@ html {
 
 [data-theme="dark"] {
     --subscribe-bc-dark: #151822;
+    --input-border-color-dark: #42464d;
+    --input-text-color: #75777d;
 }
 
 
@@ -174,4 +176,9 @@ margin: 2rem auto auto auto
 }
 
 @media (prefers-color-scheme: dark){
+    
 }
+
+/*  --subscribe-bc-dark: #151822;
+    --input-border-color-dark: #42464d;
+    --input-text-color: #75777d; */
