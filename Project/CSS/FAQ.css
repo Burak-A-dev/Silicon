@@ -31,6 +31,50 @@ html {
   --accordion-closed-dark: #b9babd;
   --faq-h4-dark: #b6b7ba;
   --faq-button-span-bc: #1e222b;
+  --contact-box-border-dark: #151922;
+}
+
+[data-theme="dark"] .faq-h2 {
+  color: var(--bc-light);
+}
+
+[data-theme="dark"] .faq-h4 {
+  color: var(--faq-h4-dark);
+}
+
+[data-theme="dark"] .contact-box1,
+[data-theme="dark"] .contact-box2 {
+  background: var(--bc-dark);
+  border: 1px solid var(--contact-box-border-dark);
+}
+
+[data-theme="dark"] .contact-box1 h4,
+[data-theme="dark"] .contact-box2 h4 {
+  color: var(--faq-h4-dark);
+}
+
+[data-theme="dark"] .contact-box1 button {
+  color: var(--button-bc);
+}
+[data-theme="dark"] .contact-box2 button {
+  color: var(--contact-us-btn-color);
+}
+
+[data-theme="dark"] button.accordion-button .question-text {
+  color: var(--bc-light);
+}
+
+[data-theme="dark"] .faq {
+  background-color: var(--faq-container-border-dark);
+  border: none;
+}
+
+[data-theme="dark"] .accordion-span {
+  background-color: var(--faq-button-span-bc);
+}
+
+[data-theme="dark"] .button.accordion-button {
+  font-weight: normal;
 }
 
 .faq-container,
@@ -195,13 +239,11 @@ button.accordion-button.active + .accordion-content {
 }
 
 @media (min-width: 768px) {
-
   .faq-container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto 2rem auto;
-}
-
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 2rem auto;
+  }
 
   .contact-container {
     display: grid;
@@ -227,12 +269,14 @@ button.accordion-button.active + .accordion-content {
     box-shadow: 0 6px 18px rgba(16, 24, 40, 0.05);
   }
 
-  .contact-box1 img {
+  .contact-box1 img,
+  .contact-box2 img {
     width: 1.8rem;
     margin-bottom: 1rem;
   }
 
-  .contact-box1 h4 {
+  .contact-box1 h4,
+  .contact-box2 h4 {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -252,25 +296,6 @@ button.accordion-button.active + .accordion-content {
     padding: 0;
   }
 
-  .contact-box1 button img {
-    width: 1rem;
-    height: auto;
-    color: var(--button-bc);
-    margin: auto;
-  }
-
-  .contact-box2 img {
-    width: 1.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .contact-box2 h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: var(--faq-h2-light);
-  }
-
   .contact-box2 button {
     display: inline-flex;
     align-items: center;
@@ -284,23 +309,16 @@ button.accordion-button.active + .accordion-content {
     padding: 0;
   }
 
-  .contact-box2 button img {
-    width: 1rem;
-    height: auto;
-    margin: auto;
-  }
-
-  .faq-btn-mobile{
+  .faq-btn-mobile {
     display: none;
   }
 }
 
 @media (min-width: 1920px) {
-
   #faq {
     display: grid;
     grid-template-columns: 25rem 38rem;
-    grid-template-rows: 1fr 1fr 3fr 4fr; 
+    grid-template-rows: 1fr 1fr 3fr 4fr;
     align-items: flex-start;
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -308,7 +326,7 @@ button.accordion-button.active + .accordion-content {
     margin: 0 auto;
     row-gap: 1rem;
   }
-  
+
   .faq-h2 {
     grid-column: 1;
     grid-row: 1;
@@ -325,7 +343,7 @@ button.accordion-button.active + .accordion-content {
     text-align: left;
     font-size: 1rem;
     margin-top: 0.75rem;
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
     color: var(--faq-h4-light);
   }
 
@@ -333,7 +351,7 @@ button.accordion-button.active + .accordion-content {
     grid-column: 1;
     grid-row: 3;
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
     width: 100%;
     margin: 0;
@@ -369,7 +387,7 @@ button.accordion-button.active + .accordion-content {
     box-shadow: none;
     height: 28rem;
   }
-  
+
   .faq {
     border-radius: 12px;
     border: 1px solid var(--faq-container-border-light);
@@ -379,41 +397,6 @@ button.accordion-button.active + .accordion-content {
   }
 
   .faq-btn-mobile {
-     display: none;
-  }
-}
-
-
-@media (prefers-color-scheme: dark) {
-  .faq-h2{
-    color: var(--bc-light);
-  }
-  .faq-h4{
-    color: var(--faq-h4-dark);
-  }
-  .contact-box1{
-    border: 1px solid var(--contact-box-border);
-  }
-  .contact-box2{
-    border: 1px solid var(--contact-box-border);
-  }
-  .contact-box1 h4 {
-    color: var(--faq-h4-dark);
-  }
-  .contact-box2 h4 {
-    color: var(--faq-h4-dark);
-  }
-  button.accordion-button .question-text{
-    color: var(--bc-light);
-  }
-  .faq{
-    background-color: var(--faq-container-border-dark);
-    border: none;
-  }
-  .accordion-span{
-    background-color: var(--faq-button-span-bc);
-  }
-  .button.accordion-button{
-    font-weight: normal;
+    display: none;
   }
 }

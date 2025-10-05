@@ -27,15 +27,14 @@ footer{
     align-self: center;
     justify-content: center;
     text-align: center;
-    background-color: #fff;
+    background-color: var(--footer-bc-light);
     font-size: 1.4rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
     color: var(--footer-text-color-light);
 }
 
-@media (prefers-color-scheme: dark){
-    footer{
-        color: var(--footer-text-color-dark);
-    }
+[data-theme="dark"] footer {
+    background-color: var(--footer-bc-dark);
+    color: var(--footer-text-color-dark);
 }

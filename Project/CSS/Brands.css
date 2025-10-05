@@ -8,10 +8,10 @@
 
 :root {
     --bc-button-light: #fff;
-
     --border-color: #e2e5f1;
     --brands-darkmode-bc: #0b0f19;
     --brands-button-darkmode: #131022;
+    --brands-light-bc: #fff;
 }
 
 #brands {
@@ -22,13 +22,22 @@
 }
 
 .brands {
-    background-color: var(--bc-button-light);
+    background-color: var(--brands-light-bc);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
     max-width: 1200px;
+}
+
+[data-theme="dark"] .brands {
+    background-color: var(--brands-darkmode-bc);
+}
+
+[data-theme="dark"] .brands-button {
+    background-color: var(--brands-button-darkmode);
+    border: 0.5px solid var(--border-color);
 }
 
 .brands-button {
@@ -45,6 +54,7 @@
     padding: 0;
 }
 
+
 .brands-img {
     width: 70%;
     height: 70%;
@@ -58,21 +68,8 @@
   }
 }
 
-
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
     #brands{
         display: none;
     }
-}
-
-
-@media (prefers-color-scheme: dark){
-
-#brands{
-    background-color: var(--brands-darkmode-bc);
-}
-
-.brands-button{
-    background-color: var(--brands-button-darkmode);
-}
 }

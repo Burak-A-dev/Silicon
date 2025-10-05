@@ -22,13 +22,13 @@ html {
 }
 
 [data-theme="dark"] {
-    --text-color-gray700: #565973;
-    --gray800-color: #3E4265;
-    --main-button-background-color: #6366f1;
-    --white: #fff;
-    --bc-dark-lighter:#1b1f29;
-    --bc-dark-darker: #0b0f19;
-    --hero-p-dark: #585c7b;
+  --text-color-gray700: #565973;
+  --gray800-color: #3E4265;
+  --main-button-background-color: #6366f1;
+  --white: #fff;
+  --bc-dark-lighter:#1b1f29;
+  --bc-dark-darker: #0b0f19;
+  --hero-p-dark: #585c7b;
 }
 
 #Hero {
@@ -41,6 +41,10 @@ html {
   row-gap: 1rem;
   padding: 2rem 1rem 0 1rem;
   margin-top: 2rem;
+}
+
+html[data-theme="dark"] #Hero {
+  background: linear-gradient(to bottom, var(--bc-dark-darker) 0%, var(--bc-dark-lighter) 100%);
 }
 
 .hero-column-left {
@@ -57,12 +61,20 @@ html {
   margin: 0;
 }
 
+html[data-theme="dark"] .hero-header {
+  color: var(--white);
+}
+
 .hero-p {
   font-size: 20px;
   color: var(--text-color-gray700);
   text-align: center;
   width: 80%;
   margin: 0;
+}
+
+html[data-theme="dark"] .hero-p {
+  color: var(--hero-p-dark);
 }
 
 .download-buttons {
@@ -91,7 +103,16 @@ img {
 .apple-dark,
 .google-dark {
   display: none;
-  /* background-color: var(--bc-dark-lighter); */
+}
+
+html[data-theme="dark"] .apple-light,
+html[data-theme="dark"] .google-light {
+  display: none;
+}
+
+html[data-theme="dark"] .apple-dark,
+html[data-theme="dark"] .google-dark {
+  display: block;
 }
 
 .phone-tablet {
@@ -203,29 +224,5 @@ img {
     max-width: 100%;
     height: auto;
     justify-self: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  #Hero {
-    background: linear-gradient(to bottom, var(--bc-dark-darker) 0%, var(--bc-dark-lighter) 100%);
-  }
-
-  .hero-header {
-    color: var(--white);
-  }
-
-  .hero-p {
-    color: var(--hero-p-dark);
-  }
-
-  .apple-light,
-  .google-light {
-    display: none;
-  }
-
-  .apple-dark,
-  .google-dark {
-    display: block;
   }
 }
